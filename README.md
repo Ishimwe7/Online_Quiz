@@ -5,7 +5,7 @@ diagnose issues, and track events. Logs can include messages, errors, warnings, 
 **2. Why Logging is Important**   
 ***Debugging***: Helps in identifying and resolving issues.  
 ***Monitoring***: Tracks the application's performance and behavior.   
-****Auditing***: Provides a history of events for security and compliance.   
+***Auditing***: Provides a history of events for security and compliance.   
 ***Maintenance***: Aids in maintaining and improving the application over time.   
 **3. Understanding Logging Levels**   
 Logging levels define the severity of the messages being logged:  
