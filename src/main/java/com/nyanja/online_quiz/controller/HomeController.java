@@ -9,19 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.HttpCookie;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class HomeController  extends  HttpServlet {
-
-    private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
-
-    @GetMapping("/")
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    @GetMapping("/online-quiz-app")
     public String home() {
         logger.info("Going to home page");
         return "index";

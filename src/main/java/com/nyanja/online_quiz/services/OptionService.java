@@ -3,8 +3,8 @@ package com.nyanja.online_quiz.services;
 import com.nyanja.online_quiz.model.Option;
 import com.nyanja.online_quiz.model.Question;
 import com.nyanja.online_quiz.repositories.OptionRepo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,8 @@ public class OptionService {
 
     @Autowired
     private OptionRepo optionRepo;
-    private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
+    //private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(OptionService.class);
     public List<Option> getAllOptions() {
         logger.info("Fetching all options");
         return optionRepo.findAll();

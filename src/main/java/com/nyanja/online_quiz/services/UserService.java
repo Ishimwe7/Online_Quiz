@@ -2,8 +2,8 @@ package com.nyanja.online_quiz.services;
 
 import com.nyanja.online_quiz.model.User;
 import com.nyanja.online_quiz.repositories.UserRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
-
+    //private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(UserService.class);
     public List<User> getAllUsers() {
         logger.info("Fetching all Users");
         return userRepository.findAll();

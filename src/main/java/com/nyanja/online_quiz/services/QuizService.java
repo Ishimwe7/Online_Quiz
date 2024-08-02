@@ -1,12 +1,10 @@
 package com.nyanja.online_quiz.services;
 
-import com.nyanja.online_quiz.model.Attempt;
 import com.nyanja.online_quiz.model.Quiz;
 import com.nyanja.online_quiz.model.User;
 import com.nyanja.online_quiz.repositories.QuizRepo;
-import com.nyanja.online_quiz.repositories.UserRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,8 @@ public class QuizService {
 
     @Autowired
     private QuizRepo quizRepo;
-    private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
+    //private static final Logger logger = LoggerFactory.getLogger(AttemptService.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(QuestionService.class);
     public List<Quiz> getAllQuizzes() {
         logger.info("Fetching all quizzes");
         return quizRepo.findAll();
